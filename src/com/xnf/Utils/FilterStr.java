@@ -1,9 +1,12 @@
-package com.xnf.test;
+package com.xnf.Utils;
+
+import com.xnf.test.FaArBag;
+import com.xnf.test.Son;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class Test {
+public class FilterStr {
 
     /**
      * 过滤特殊字符
@@ -34,12 +37,10 @@ public class Test {
         }
         //特殊字符
         str2 = stringFilter(str2);
-        return str;
+        return str2;
     }
 
     public static void main(String[] args) {
-        Son s = new Son();
-        FaArBag.class.getName();
         System.out.println(paramValidate("aaa%';drop table tbl_test;#"));
     }
 }
