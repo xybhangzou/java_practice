@@ -6,6 +6,9 @@ import com.xnf.test.Son;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+/**
+ * sql 注入过滤。
+ */
 public class FilterStr {
 
     /**

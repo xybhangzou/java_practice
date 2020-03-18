@@ -29,17 +29,17 @@ public class Test {
         String[] SqlStr1 = {"and", "exec", "execute", "insert", "select", "delete", "update", "count", "drop", "chr", "mid", "master", "truncate", "char", "declare", "sitename", "net user", "xp_cmdshell", "like", "and", "exec", "execute", "insert", "create", "drop", "table", "from", "grant", "use", "group_concat", "column_name", "information_schema.columns", "table_schema", "union", "where", "select", "delete", "update", "order", "by", "count", "chr", "mid", "master", "truncate", "char", "declare", "or"};//词语
         for (int i = 0; i < SqlStr1.length; i++) {
             if (str2.indexOf(SqlStr1[i]) >= 0) {
-                str2 = str2.replaceAll(SqlStr1[i], "");//正则替换词语，无视大小写
+                str = str.replaceAll("(?i)"+SqlStr1[i], "");//正则替换词语，无视大小写
             }
         }
         //特殊字符
-        str2 = stringFilter(str2);
+        str = stringFilter(str);
         return str;
     }
 
     public static void main(String[] args) {
         Son s = new Son();
         FaArBag.class.getName();
-        System.out.println(paramValidate("aaa%';drop table tbl_test;#"));
+        System.out.println(paramValidate("DAa%';Drop table tbl_test;#"));
     }
 }
